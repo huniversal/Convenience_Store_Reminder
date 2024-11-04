@@ -1,6 +1,5 @@
 import express from 'express';
 import User from '../models/User.js';
-import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import smtpTransport from '../config/email.js';
 import path from 'path';
@@ -32,9 +31,7 @@ router.post(
                 return res.status(400).json({ message: '이미 사용 중인 이메일입니다.' });
             }
 
-            // 비밀번호 해싱 (saltRounds는 10으로 설정)
-            const hashedPassword = await bcrypt.hash(password.trim(), 10);
-            const newUser = new User({ email, password: hashedPassword });
+            const newUser = new User({ email, password });
             await newUser.save();
 
             res.status(201).json({ message: '회원가입 성공' });
@@ -90,7 +87,7 @@ router.post('/login', async (req, res) => {
         console.log('저장된 해시:', user.password);
 
         // 비밀번호 비교
-        const isMatch = await bcrypt.compare(password, user.password);
+        const isMatch = await user.comparePassword(password);
         console.log('비밀번호 비교 결과:', isMatch);
 
         if (!isMatch) {
