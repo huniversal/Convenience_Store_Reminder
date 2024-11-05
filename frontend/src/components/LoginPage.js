@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import "./style/LoginPage.css";
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -30,31 +31,34 @@ const LoginPage = () => {
 
   return (
     <div className="login-container">
-      <h2>로그인 페이지</h2>
+      <h1>편의점 알리미</h1>
       <form onSubmit={handleLogin}>
-        <div>
-          <label>이메일 (아이디로 사용)</label>
+        <div className="input-container">
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            placeholder="아이디"
             required
           />
         </div>
-        <div>
-          <label>비밀번호</label>
+        <div className="input-container">
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            placeholder="비밀번호"
             required
           />
         </div>
-        <button type="submit">로그인</button>
+        <button type="submit" className="login-button">로그인</button>
       </form>
-      <button onClick={handleRegisterClick}>회원가입</button>
+      <div className="additional-links">
+        <a href="#">비밀번호 재설정</a> | <a onClick={handleRegisterClick}>회원가입</a>
+      </div>
     </div>
   );
+  
 };
 
 export default LoginPage;

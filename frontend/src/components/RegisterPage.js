@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import "./style/RegisterPage.css"
 
 const RegisterPage = () => {
   const [email, setEmail] = useState('');
@@ -97,7 +98,7 @@ const RegisterPage = () => {
     <div className="register-container">
       <h2>회원가입 페이지</h2>
       <form onSubmit={handleRegister}>
-        <div>
+        <div className ="email-input">
           <label>이메일 (아이디로 사용)</label>
           <input
             type="email"
@@ -108,7 +109,7 @@ const RegisterPage = () => {
           <button type="button" onClick={handleEmailVerification} disabled={countdown > 0}>이메일 인증하기</button>
           {countdown > 0 && <span> {countdown}초 후 재인증 가능</span>}
         </div>
-        <div>
+        <div className = "authCode-input">
           <label>인증 번호 입력</label>
           <input
             type="text"
@@ -120,7 +121,7 @@ const RegisterPage = () => {
           />
           <button type="button" onClick={handleAuthCodeVerificationButton}>인증하기</button>
         </div>
-        <div>
+        <div className="pw-input">
           <label>비밀번호</label>
           <input
             type="password"
@@ -129,7 +130,7 @@ const RegisterPage = () => {
             required
           />
         </div>
-        <div>
+        <div className="pw-check">
           <label>비밀번호 확인</label>
           <input
             type="password"
