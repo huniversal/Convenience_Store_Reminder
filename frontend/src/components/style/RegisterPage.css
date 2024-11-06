@@ -4,7 +4,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 100vh;
   font-family: 'Arial', sans-serif;
 }
 
@@ -18,8 +18,72 @@ body {
   text-align: center;
 }
 
-h2 {
+.title {
   font-size: 1.5em;
-  color : #007bff;
+  color: #007bff;
   margin-bottom: 20px;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.9em;
+  color: #495057;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.email-button {
+  width : 100%;
+  padding : 12px;
+  background-color: white;
+  color : #007bff;
+  border-color: #007bff;
+  border-radius: 5px;
+  border : solid 2.2px;
+  margin-top: 8px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.footer {
+  margin-top: 20px;
+}
+
+.footer-button {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.footer > p {
+  margin-bottom: 9px;
+  font-size : 0.85em;
+  color : #495057;
 }

@@ -18,12 +18,12 @@ const LoginPage = () => {
       if (response.status === 200) {
         alert('로그인 성공!');
         navigate('/main');
-      }
-    } catch (error) {
+      }  
+    } catch (error) {  
       console.error('로그인 오류:', error.response?.data);
-      alert('로그인 실패. 이메일 또는 비밀번호를 확인하세요.');
-    }
-  };
+      alert('로그인 실패. 이메일 또는 비밀번호를 확인하세요.'); 
+    } 
+  }; 
 
   const handleRegisterClick = () => {
     navigate('/register');

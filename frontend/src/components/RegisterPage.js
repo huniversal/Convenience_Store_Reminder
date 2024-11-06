@@ -96,58 +96,55 @@ const RegisterPage = () => {
 
   return (
     <div className="register-container">
-      <h2>회원가입 페이지</h2>
+      <h2 className="title">회원가입</h2>
       <form onSubmit={handleRegister}>
-        <div className ="email-input">
-          <label>이메일 (아이디로 사용)</label>
+        <div className="input-group">
+          <label>이메일</label>
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            placeholder="이메일"
             required
           />
-          <button type="button" onClick={handleEmailVerification} disabled={countdown > 0}>이메일 인증하기</button>
-          {countdown > 0 && <span> {countdown}초 후 재인증 가능</span>}
+          <button type="button" className ="email-button" onClick={handleEmailVerification} disabled={countdown > 0}>이메일 인증하기</button>
         </div>
-        <div className = "authCode-input">
-          <label>인증 번호 입력</label>
+        <div className="input-group">
+          <label>인증번호 입력</label>
           <input
             type="text"
             value={enteredAuthCode}
-            onChange={handleAuthCodeVerification}
-            style={{
-              borderColor: authCodeStatus === 'valid' ? 'green' : authCodeStatus === 'invalid' ? 'red' : 'black',
-            }}
+            onChange={(e) => setEnteredAuthCode(e.target.value)}
+            placeholder="인증번호"
+            required
           />
-          <button type="button" onClick={handleAuthCodeVerificationButton}>인증하기</button>
         </div>
-        <div className="pw-input">
+        <div className="input-group">
           <label>비밀번호</label>
           <input
             type="password"
             value={password}
-            onChange={(e) => setPassword(e.target.value.trim())}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="비밀번호"
             required
           />
         </div>
-        <div className="pw-check">
+        <div className="input-group">
           <label>비밀번호 확인</label>
           <input
             type="password"
             value={confirmPassword}
-            onChange={(e) => {
-              setConfirmPassword(e.target.value.trim());
-              setPasswordMatchStatus(e.target.value === password ? 'valid' : 'invalid');
-            }}
-            style={{
-              borderColor: passwordMatchStatus === 'valid' ? 'green' : passwordMatchStatus === 'invalid' ? 'red' : 'black',
-            }}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            placeholder="비밀번호 확인"
             required
           />
         </div>
-        <button type="submit">회원가입 완료</button>
+        <button type="submit" className="submit-button">회원가입하기</button>
       </form>
-      <button onClick={handleLoginClick}>로그인 페이지로 이동</button>
+      <div className="footer">
+        <p>이미 아이디가 있으신가요?</p>
+        <button className="footer-button" onClick={handleLoginClick}>로그인</button>
+      </div>
     </div>
   );
 };

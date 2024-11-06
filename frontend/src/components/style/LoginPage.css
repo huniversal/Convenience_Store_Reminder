@@ -66,8 +66,9 @@ input:focus {
   color: #666;
   text-decoration: none;
   margin: 0 5px;
+  cursor: pointer;
 }
 
-.additional-links a:hover {
+/* .additional-links a:hover {
   text-decoration: underline;
-}
+} */
