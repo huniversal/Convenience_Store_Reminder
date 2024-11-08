@@ -41,7 +41,6 @@ html, body {
 }
 
 .content-wrapper {
-  margin-left: 100px;
   padding: 40px;
   /* background-color: red; */
   background-color: #ffffff;
@@ -49,17 +48,19 @@ html, body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   flex: 1;
   height: calc(100% - 100px);
-  overflow: auto;
+  /*overflow: auto;*/
   margin-top: 50px;
-  margin-bottom: 90px;
-  margin-right: 50px;
+  margin-bottom: 150px;
+  margin-right: 100px;
+  margin-left: 100px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  flex-direction: column;
 }
 
 .content {
-  width: 100%;
+  width: 800px;
   max-width: 800px;
   padding: 20px;
   background-color: #ffffff;
@@ -67,6 +68,7 @@ html, body {
   border-radius: 10px;
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   overflow: auto; /* 콘텐츠가 많아질 때 스크롤이 가능하도록 */
+  flex-direction: column;
 }
 
 .menu {
@@ -108,3 +110,4 @@ html, body {
   margin-right: 10px;
   vertical-align: middle;
 }
+/* ---------------------------------------------------- */

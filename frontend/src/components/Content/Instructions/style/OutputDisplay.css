@@ -1,0 +1,24 @@
+.OutputDisplay {
+  margin-top: 20px;
+}
+
+.output-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  font-size: 100px;
+}
+
+.output-item button {
+  cursor: pointer;
+  border: none;
+  background-color: rgb(255, 92, 92);
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
