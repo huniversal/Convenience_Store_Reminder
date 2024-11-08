@@ -41,9 +41,10 @@ html, body {
 }
 
 .content-wrapper {
-  margin-left: 130px;
-  padding: 20px;
-  background-color: #e9ecef;
+  margin-left: 100px;
+  padding: 40px;
+  /* background-color: red; */
+  background-color: #ffffff;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   flex: 1;
@@ -52,14 +53,19 @@ html, body {
   margin-top: 50px;
   margin-bottom: 90px;
   margin-right: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content {
   width: 100%;
+  max-width: 800px;
   padding: 20px;
   background-color: #ffffff;
+  /* background-color: blue; */
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   overflow: auto; /* 콘텐츠가 많아질 때 스크롤이 가능하도록 */
 }
 

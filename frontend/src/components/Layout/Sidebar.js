@@ -6,7 +6,7 @@ import {
     BiSolidReport,
     BiTask
 } from "react-icons/bi";
-import "./Layout_Style/sidebar.css";
+import "../style/sidebar.css";
 
 const Sidebar = () => {
     return (

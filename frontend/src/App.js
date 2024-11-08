@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import Sidebar from './components/Layout/Sidebar';
 import LoginPage from './components/LoginPage';
 import RegisterPage from './components/RegisterPage';
-import Instructions from './components/Instructions';
-import Community from './components/Community';
-import MyPage from './components/MyPage';
+import Instructions from './components/Content/Instructions/Instructions';
+import Community from './components/Content/Community/Community';
+import MyPage from './components/Content/MyPage/MyPage';
 import './App.css';
 
 function App() {
