@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import InputForm from "./InputForm";
 import OutputDisplay from "./OutputDisplay";
+import ControlButtons from "./ControlButtons";
 
 const Instructions = () => {
   const [outputs, setOutputs] = useState([]);
@@ -18,6 +19,7 @@ const Instructions = () => {
     <div className="content">
       <InputForm onCreate={handleCreate} />
       <OutputDisplay outputs={outputs} onDelete={handleDelete} />
+      <ControlButtons />
     </div>
   );
 };

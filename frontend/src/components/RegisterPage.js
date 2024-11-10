@@ -17,10 +17,10 @@ const RegisterPage = () => {
 
   useEffect(() => {
     let timer;
-    if (countdown > 0) {
+    if (countdown > 0) {              
       timer = setTimeout(() => setCountdown(countdown - 1), 1000);
     }
-    return () => clearTimeout(timer);
+    return () => clearTimeout(timer);        
   }, [countdown]);
 
   const handleEmailVerification = async (e) => {
