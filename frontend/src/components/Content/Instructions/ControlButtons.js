@@ -1,14 +1,31 @@
 import React from 'react';
-import { Howl } from 'howler';
+import {Howl, Howler} from 'howler';
 import '../Instructions/style/ControlButtons.css';
+// import './Instructions/ControlButtons.mp3';
 
 const ControlButtons = () => {
   const handlePlaySound = () => {
     const sound = new Howl({
-      src: ['./ControlButtons.mp3'], 
-      volume: 1.0, // 볼륨 크기 설정 (0.0 ~ 1.0)
-      onend : () => {
+      src: [
+        '../../Content/Instructions/ControlButtons.webm',        
+        '../../Content/Instructions/ControlButtons.mp3',
+        './ControlButtons.mp3', 
+        './ControlButtons.webm'
+    ], 
+      format: [
+        'webm',
+        'mp3'
+      ],
+      volume : 1.0, // 볼륨 크기 설정 (0.0 ~ 1.0)
+      html5  : true,
+      onend  : () => {
         console.log("start!")
+      },
+      onloaderror: (id, error) => {
+        console.error('오디오 로드 오류:', error);
+      },
+      onplayerror: (id, error) => {
+        console.error('오디오 재생 오류:', error);
       }
     });
     sound.play();
