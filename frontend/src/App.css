@@ -6,8 +6,10 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
-}
+  align-items: center;
+  /* overflow: hidden; */
+}         
+
 
 #root {
   height: 100%;
@@ -41,22 +43,24 @@ html, body {
 }
 
 .content-wrapper {
+  /* 메인 컨텐츠 박스 */
+
   padding: 40px;
   /* background-color: red; */
   background-color: #ffffff;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   flex: 1;
-  height: calc(100% - 100px);
+  height: 600px;
   /*overflow: auto;*/
-  margin-top: 50px;
-  margin-bottom: 150px;
-  margin-right: 100px;
-  margin-left: 100px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  margin: 50px auto;
+  margin-right: 100px;
+  margin-left: 100px; 
+  margin-bottom: 100px;
 }
 
 .content {

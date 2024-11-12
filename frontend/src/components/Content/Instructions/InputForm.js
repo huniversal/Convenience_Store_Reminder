@@ -31,7 +31,7 @@ const InputForm = ({ onCreate }) => {
         value={content}
         onChange={onChangeContent}
         onKeyDown={onKeydown}
-        placeholder="안내문구를 입력하세요..."
+        placeholder="안내문구를 입력하세요...          "
       />
       <button onClick={onSubmit}>입력</button>
     </div>

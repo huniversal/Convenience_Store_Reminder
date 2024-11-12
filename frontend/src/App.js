@@ -37,6 +37,6 @@ function MainPageLayout() {
       </div>
     </div>
   );
-}
+}                             
 
 export default App;
