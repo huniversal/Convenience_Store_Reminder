@@ -118,6 +118,9 @@ const RegisterPage = () => {
             placeholder="인증번호"
             required
           />
+          <button type='certification-button' className='certification-button' onClick={handleAuthCodeVerificationButton}>
+            인증번호
+          </button>
         </div>
         <div className="input-group">
           <label>비밀번호</label>
