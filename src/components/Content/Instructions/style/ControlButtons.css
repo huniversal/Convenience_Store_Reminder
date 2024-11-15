@@ -1,0 +1,22 @@
+.Button {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.Button button {
+  width: 300px;
+  height: 100px;
+  background-color: #007bff; /* 파란색 */
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Button button:hover {
+  background-color: #0056b3;
+}

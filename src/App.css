@@ -1,0 +1,82 @@
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* :root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --content-wrapper-bg: #ffffff; 
+  --content-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --content-wrapper-bg: #1e1e1e;
+  --content-bg: #1e1e1e;
+} */
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 2em;
+  font-family: Arial, sans-serif;
+  align-items: center;
+  overflow: auto;
+  box-sizing: border-box;
+  transition: background-color 0.3s, color 0.3s; /* 전환 효과 */
+  -webkit-font-smoothing: antialiased;
+  background-image: url('/src/components/style/background.png');
+  /* background-color: lightsteelblue; */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  @media screen and (max-width: 480px) {
+    padding: 0.8em;
+  }
+}         
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.content {
+  /* 메인 컨텐츠 박스 */
+  background-color: rgb(255 255 255 / 50%) !important;
+  max-width: 1250px;
+  max-height: 860px;
+  height: 90vh;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  border-radius: 14px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.content-wrapper {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  color: var(--theme-color);
+  padding: 20px 40px;
+  height: 100%;
+  overflow: auto;
+  background-color: var(--theme-bg-color);
+  @media screen and (max-width: 510px) {
+    padding: 20px;
+  }
+}
+
+
+

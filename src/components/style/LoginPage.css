@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 90vh -> 100vh 로 변경 */
+  font-family: 'Arial', sans-serif;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  background-color: white;
+  padding: 40px;
+  margin: auto; /* 전체적으로 수직 수평 가운데 정렬을 위해 수정 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.input-container,
+.button-container {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+input,
+.login-button {
+  width: 100%;
+  padding: 15px;
+  font-size: 1em;
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 5px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.15);
+}
+
+.login-button {
+  background-color: #3399ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.additional-links {
+  margin-top: 15px;
+}
+
+.additional-links a {
+  color: #666;
+  text-decoration: none;
+  margin: 0 5px;
+  cursor: pointer;
+}
