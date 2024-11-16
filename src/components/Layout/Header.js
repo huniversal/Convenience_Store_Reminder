@@ -16,7 +16,7 @@ const Header = () => {
             </div>
             <nav className="header-nav">
                 <Link to="/main" className="nav-item">안내</Link>
-                <Link to="/main/community" className="nav-item">커뮤니티</Link>
+                <Link to="/main/community" className="nav-item">근무일지</Link>
                 <Link to="/main/my" className="nav-item">마이페이지</Link>
             </nav>
             <div class="search-bar">

@@ -15,7 +15,7 @@ function App() {
   return (
     <Router>
       <ThemeProvider>
-        <div className="app-container">
+        <div className="app">
           <Routes>
             {/* 처음 접속 시 로그인 화면으로 이동 */}
             <Route path="/"         element={<Navigate to="/login" />} />
@@ -43,20 +43,20 @@ function MainPageLayout() {
   }, []);
 
   return (
-    <div className="content"> 
-    {/* 컨텐츠 메인 박스 */}
+    <div className='app-container'>
       <Header className="nav" />
+      <div className="main-container">  
         <div className='content-wrapper'>
-          <Routes>
-            <Route path=""          element={<Instructions />} />
-            <Route path="community" element={<Community />} />
-            <Route path="my"        element={<MyPage />} />
-          </Routes>          
-        </div>
+            <Routes>
+              <Route path=""          element={<Instructions />} />
+              <Route path="community" element={<Community />} />
+              <Route path="my"        element={<MyPage />} />
+            </Routes>          
+      </div>
     </div>
+  </div>
   );
 }                         
 
-{/* <div className="main-page-layout"> */}
-
 export default App;
+

@@ -16,13 +16,11 @@ const Instructions = () => {
   };
 
   return (
-    <div className="main-wrapper">
-        <div className="content-section">
+        <div className="content-wrapper">
           <InputForm onCreate={handleCreate} />
           <OutputDisplay outputs={outputs} onDelete={handleDelete} />
           <ControlButtons />
         </div>
-    </div>
   );
 };
 

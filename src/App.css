@@ -45,13 +45,13 @@ body {
   width: 100%;
 }
 
-.content {
+.app-container {
   /* 메인 컨텐츠 박스 */
-  background-color: rgb(255 255 255 / 50%) !important;
+  background-color: rgb(255 255 255 / 50%);
   max-width: 1250px;
   max-height: 860px;
   height: 90vh;
-  padding: 40px;
+  /* padding: 40px; */
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -64,19 +64,26 @@ body {
   font-weight: 500;
 }
 
-.content-wrapper {
-  background-color: red;
+.main-container {
   display: flex;
   flex-direction: column;
-  color: var(--theme-color);
+  flex-grow: 1;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
   padding: 20px 40px;
   height: 100%;
+  max-width: 1250px;
   overflow: auto;
-  background-color: var(--theme-bg-color);
+  color : #3c3a3a;
+  background-color: red;
   @media screen and (max-width: 510px) {
     padding: 20px;
   }
 }
+
 
 
 
